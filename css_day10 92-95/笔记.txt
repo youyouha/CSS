@@ -1,0 +1,12 @@
+Emment语法：前身是Zen coding ,它使用缩写，来提高hml/css的编写速度，Vscode内部已经集成该语法。
+    1.快速生成HTML结构语法
+    2.快速生成CSS样式语法
+
+vscode快速格式化代码：Shift+Alt+F
+也可以设置当我们保存页面的时候自动格式化代码：
+1）文件 - 首选项 - 设置
+2）搜索emmet.include;
+3）在setting.json下的 用户 中添加以下语句：
+	"editor.formatOnType":true,
+	"editor.formatOnSave":true
+   只需要设置一次即可

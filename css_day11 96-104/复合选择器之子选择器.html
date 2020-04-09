@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子元素选择器</title>
+    <!-- 子元素选择器（子选择器）只能选择作为某元素最近一级子元素。简单理解就是选亲儿子 -->
+    <!-- 语法： 元素1 > 元素2 { 样式声明 } -->
+    <!-- 上述语法表示选择元素1 里面的所有直接后代（子元素）元素2 -->
+    <style>
+        /* 此语句只可以把“我是儿子”设置为红色 */
+        .nav>a {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <a href="#">我是儿子</a>
+        <p>
+            <a href="#">我是孙子</a>
+        </p>
+    </div>
+</body>
+
+</html>

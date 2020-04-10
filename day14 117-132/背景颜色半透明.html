@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景颜色半透明</title>
+    <style>
+        div {
+            width: 500px;
+            height: 500px;
+            /* 背景颜色半透明效果  最后一个参数是alpha透明度，取值范围在0-1之间 */
+            background: rgba(0, 0, 0, 0.3);
+            /* 我们习惯把0.3的0省略掉，其效果不变 */
+            background: rgba(0, 0, 0, .3);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>盒子里的内容并不受影响</div>
+</body>
+
+</html>

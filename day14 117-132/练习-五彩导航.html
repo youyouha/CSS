@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五彩导航</title>
+    <style>
+        .nav a {
+            /* 行内元素转换为行内块元素 */
+            display: inline-block;
+            width: 160px;
+            height: 130px;
+            background-color: pink;
+            text-decoration: none;
+            color: black;
+            font-weight: 700;
+        }
+
+        .nav .bg1 {
+            background: url(images/icons/1.png) no-repeat;
+            text-align: center;
+            line-height: 110px;
+        }
+
+        .nav .bg1:hover {
+            background-image: url(images/icons/11.png);
+        }
+
+        .nav .bg2 {
+            background: url(images/icons/2.png) no-repeat;
+            text-indent: 2em;
+            line-height: 110px;
+        }
+
+        .nav .bg2:hover {
+            background-image: url(images/icons/22.png);
+        }
+
+        .nav .bg3 {
+            background: url(images/icons/3.png) no-repeat;
+            text-indent: 3em;
+            line-height: 110px;
+        }
+
+        .nav .bg3:hover {
+            background-image: url(images/icons/33.png);
+        }
+
+        .nav .bg4 {
+            background: url(images/icons/4.png) no-repeat;
+            text-indent: 1.5em;
+            line-height: 110px;
+        }
+
+        .nav .bg4:hover {
+            background-image: url(images/icons/44.png);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <a class="bg1" href="https://www.baidu.com/" target="_blank">百度</a>
+        <a class="bg2" href="https://www.qq.com/" target="_blank">腾讯</a>
+        <a class=" bg3" href="https://www.163.com/" target="_blank">网易</a>
+        <a class=" bg4" href="https://www.sina.com.cn/" target="_blank">新浪</a>
+    </div>
+</body>
+
+</html>

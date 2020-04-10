@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景图片精确数值</title>
+    <style>
+        div {
+            width: 500px;
+            height: 500px;
+            background-image: url(images/woman.png);
+            background-color: pink;
+            background-repeat: no-repeat;
+            /* 如果参数值是精确单位，那么第一个肯定是X坐标，第二个一定是Y坐标。 */
+            /* 如果只指定一个数值，那该数值一定是x坐标，另一个默认垂直居中 */
+            background-position: 50px 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

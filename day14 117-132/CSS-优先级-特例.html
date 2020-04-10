@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>优先级特例</title>
+    <style>
+        /* 父亲的权重是100 */
+        #father {
+            color: red;
+        }
+
+        /* p的权重是0 */
+        /* 因为标签选择器的权重（1）>继承的权重（0） */
+        p {
+            color: pink;
+        }
+
+        body {
+            color: red;
+        }
+
+        /* a链接浏览器默认制定了一个样式 蓝色带下划线 相当于定义了一个 a{ color: blue;} 把a的样式单独写出来，所以body的样式不起作用 */
+        /* 此时给a单独设定一个样式，根据样式的层叠性green会覆盖blue */
+        a {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <p>继承的权重为0</p>
+    </div>
+    <a href="#">我是单独的样式</a>
+</body>
+
+</html>

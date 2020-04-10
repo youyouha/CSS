@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>优先级</title>
+    <style>
+        #demo {
+            color: green;
+        }
+
+        div {
+            color: red;
+        }
+
+        .test {
+            color: pink;
+        }
+
+        /* 选择器的优先级： !impont  >  行内样式 style=""  >  id选择器  >  类选择器，伪类选择器  >  元素选择器  >  继承 或 * */
+        /* 所以即便#demo放在离结构最远的位置，也是执行id选择器 */
+    </style>
+</head>
+
+<body>
+    <div class="test" id="demo">MINOMINOMINO</div>
+
+</body>
+
+</html>

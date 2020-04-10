@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景图片-方位名词</title>
+    <style>
+        div {
+            width: 500px;
+            height: 500px;
+            background-image: url(images/woman.png);
+            background-color: pink;
+            /* 不平铺 */
+            background-repeat: no-repeat;
+            /* 方位名词：top\center\bottom\left\right   如果给定的值都是两个方位名词，那么对这两个词的顺序不做要求 right center 和center right 效果是等价的 */
+            /* 向上居中 */
+            background-position: center top;
+            /* 向左垂直居中 */
+            background-position: center left;
+            /* 向右垂直居中 */
+            background-position: center right;
+            /* 水平垂直居中 */
+            background-position: center center;
+            /* 如果只指定了一个方位名词，第二个省略，第二个词默认居中对齐 */
+            background-position: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

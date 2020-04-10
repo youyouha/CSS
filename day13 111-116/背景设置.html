@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景设置</title>
+    <style>
+        .yanse {
+            width: 300px;
+            height: 50px;
+            /* 不设置背景颜色的话，一般情况下背景元素默认值是transparent（透明） */
+            /* background-color: transparent; */
+            background-color: blue;
+
+        }
+
+        .tupian1 {
+            width: 500px;
+            height: 300px;
+            /* background-image属性描述了元素的背景图像。实际开发常见于logo或者一些装饰性的小图片或者是超大的背景图片，优点是非常便于控制位置（精灵图也是一种运用场景） */
+            /* none:无背景图（默认的）    url() 使用绝对或相对地址指定背景图像 */
+            background-image: url(images/red.png);
+        }
+
+        .tupian2 {
+            width: 500px;
+            height: 500px;
+            /* 当盒子没有被背景图片填满时，就可以明显的看出背景颜色 */
+            /* 页面元素既可以添加背景颜色也可以添加背景图片 只不过背景图片会压住背景颜色 */
+            background-color: pink;
+            background-image: url(images/woman.png);
+            /* 1.背景图片不平铺 */
+            background-repeat: no-repeat;
+            /* 2.默认情况下，背景图片是平铺的 */
+            /* background-repeat: repeat; */
+            /* 3.沿着x轴平铺 */
+            /* background-repeat: repeat-x; */
+            /* 3.沿着y轴平铺 */
+            /* background-repeat: repeat-y; */
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="yanse"></div>
+    <div class="tupian1"></div>
+    <div class="tupian2"></div>
+
+</body>
+
+</html>

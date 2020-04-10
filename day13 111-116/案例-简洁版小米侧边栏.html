@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小米侧边栏</title>
+    <style>
+        /* 1、把链接a转换为块级元素，这样链接就可以单独占一行，并且有高度和宽度。 */
+        a {
+            /* 把链接a转换为块级元素 */
+            display: block;
+            /* width: 230px; */
+            /* 加了30px的内边距，会将盒子撑大至260，所以要将原来盒子的宽度-30 */
+            width: 200px;
+            height: 40px;
+            /* 让文字的行高等于盒子的高度，从而实现让文字在当前盒子内垂直居中。 */
+            line-height: 40px;
+            background-color: #535758;
+            font-size: 14 px;
+            /* 文字颜色 */
+            color: #fff;
+            /* 去掉链接默认的下划线 */
+            text-decoration: none;
+
+            /* 首行缩进2em 目的在于让文字和盒子有空隙*/
+            /* text-indent: 2em; */
+
+            /* 直接给盒子设置精确的内边距即可 */
+            padding-left: 30px;
+        }
+
+        /* 2、鼠标经过a时，给连接设置背景颜色。 */
+        a:hover {
+            background-color: #ff6f00;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">手机 电话卡</a>
+    <a href="#">电视 盒子</a>
+    <a href="#">笔记本 平板</a>
+    <a href="#">出行 穿戴</a>
+    <a href="#">智能 路由器</a>
+    <a href="#">健康 儿童</a>
+    <a href="#">耳机 音响</a>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型之内边距</title>
+    <style>
+        div {
+            width: 300px;
+            height: 200px;
+            background-color: pink;
+            /* padding-left: 50px;
+            padding-right: 50px;
+            padding-top: 50px;
+            padding-bottom: 50px; */
+
+            /* 内边距的复合写法 */
+            /* 如果只提供一个，将用于全部的四边，四个边的内边距均为5px */
+            padding: 5px;
+            /* 如果提供两个，第一个用于上（5）、下（10），第二个用于左、右 */
+            /* padding: 5px 10px; */
+            /* 如果提供三个，第一个用于上（5），第二个用于左、右（10），第三个用于下（20）。 */
+            /* padding: 5px 10px 20px; */
+            /* 如果提供全部四个参数值，将按上（5）、右（10）、下（20）、左（30）的顺序作用于四边。顺时针！！！！！         */
+            /* padding: 5px 10px 20px 30px; */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>我的左内边距是50</div>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子内边距会影响盒子大小</title>
+    <style>
+        /* 设置一个200*200的边框为5px，内边距为10px的盒子。 */
+        div {
+            /* 200-5*2-10*2=170 */
+            width: 170px;
+            height: 170px;
+            background-color: pink;
+            border: 5px solid red;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>padding也会影响盒子的实际大小：如果盒子已经有了宽度和高度，此时再指定内边距，会撑大盒子。
+        解决方法：如果保证盒子跟效果图大小保持一致，则让width/height减去多出来的内边距大小即可。</div>
+</body>
+
+</html>

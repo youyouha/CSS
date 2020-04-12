@@ -1,0 +1,54 @@
+盒子模型：
+1.边框 border：<border-width> || <border-style> || <border-color>
+	<border-width>：单位为px.
+	<border-style>：
+		none：无轮廓。border-color将被忽略，border-width计算值为0，除非边框轮廓为图像，即border-image。
+		hidden：隐藏边框。IE7及以下尚不支持
+		dotted：点状轮廓。IE6下显示为dashed效果
+		dashed：虚线轮廓。
+		solid：实线轮廓
+		double：双线轮廓。两条单线与其间隔的和等于指定的border-width值
+		groove：3D凹槽轮廓。
+		ridge：3D凸槽轮廓。
+		inset：3D凹边轮廓。
+		outset：3D凸边轮廓。
+*********边框的简写：   border：1px  solid  red ;  没有顺序
+
+2.表格的细线边框
+	border-collapse属性控制浏览器绘制表格边框方式。它控制相邻单元格的边框。
+     border-collapse：separate （边框独立） | collapse（相邻边被合并）
+
+3.边框会影响盒子实际大小
+	边框会额外增加盒子的实际大小，解决方案如下：
+		（1）测量盒子大小时不量边框。
+		（2）如果测量的时候包含了边框，则需要width/height减去边框宽度。
+
+4.内边距：
+	padding属性用于设置内边距，即边框与内容之间的距离。
+	padding-left 左内边距
+	padding-right 右内边距
+	padding-top 上内边距
+	padding-bottom 下内边距
+	内边距的复合写法： padding属性可以有一到四个值
+		padding: 5px;                             如果只提供一个，将用于全部的四边。均为5px
+		padding: 5px 10px;                     如果提供两个，第一个用于上（5）、下（10），第二个用于左、右。
+		padding: 5px 10px 20px;             如果提供三个，第一个用于上（5），第二个用于左、右（10），第三个用于下（20）。
+		padding: 5px 10px 20px 30px;     如果提供全部四个参数值，将按上（5）、右（10）、下（20）、左（30）的顺序作用于四边。顺时针！！！！！
+
+	padding也会影响盒子的实际大小：如果盒子已经有了宽度和高度，此时再指定内边距，会撑大盒子。
+	解决方法：如果保证盒子跟效果图大小保持一致，则让width/height减去多出来的内边距大小即可。
+	如果盒子本身没有指定width/height属性，则此时padding不会撑开盒子大小。
+5.外边距：
+	margin属性用于设置外边距，即控制盒子和盒子之间的距离。
+	margin-left左外边距
+	margin-right右外边距
+	margin-top上外边距
+	margin-bottom下外边距
+	外边距的复合写法与padding是一样的。
+	外边距的典型应用： 外边距可以让块级盒子水平居中，但是必须满足两个条件：
+		（1）盒子必须指定了宽度width
+		（2）盒子左右的外边距都设置为auto。
+		      常见的写法有三种：margin-left: auto;   margin-right: auto;
+				     margin: auto;
+				     margin: 0  auto; 
+	以上方法是让块级元素水平居中，行内元素或者行内块元素水平居中给其父元素添加text-align:center即可

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>权重练习题2</title>
+    <style>
+        /* 需要把第2个li变色且加粗？    给第2个li单独设置一个class */
+        /* 权重是 0010 + 0001 = 0011 */
+        .nav li {
+            color: pink;
+        }
+
+        /* 权重是0010 */
+        .joy {
+            color: salmon;
+            font-weight: 700;
+        }
+
+        /* 所以 朴秀荣 采用的 color格式为 pink */
+        /* 但若使用以下格式 */
+        .nav .joy {
+            color: rgb(211, 71, 247);
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="nav">
+        <li>redvelvet</li>
+        <li class="joy">朴秀荣</li>
+        <li>裴柱现</li>
+        <li>姜涩琪</li>
+        <li>孙胜完</li>
+        <li>金艺琳</li>
+    </ul>
+</body>
+
+</html>

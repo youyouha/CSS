@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除网页元素的内外边距</title>
+    <style>
+        /* 这句话也是我们CSS的第一行代码！ */
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        span {
+            background-color: pink;
+            /* 内元素尽量只设置左右内外边距，因为就算设置了上下内外边距也不会显示 */
+            margin: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    123
+    <ul>
+        <li>abcd</li>
+    </ul>
+    <span>行内元素尽量只设置左右内外边距</span>
+</body>
+
+</html>

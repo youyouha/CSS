@@ -1,0 +1,5 @@
+margin属性用于设置外边距，即控制盒子和盒子之间的距离。
+margin-left左外边距
+margin-right右外边距
+margin-top上外边距
+margin-bottom下外边距

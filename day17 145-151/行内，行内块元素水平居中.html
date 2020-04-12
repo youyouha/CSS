@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行内，行内块元素水平居中</title>
+    <style>
+        .father {
+            width: 900px;
+            height: 300px;
+            background-color: pink;
+            margin: 100px auto;
+            /* 要使行内、行内块元素水平居中，用margin: 0 auto;写法是不起作用的。要给其父元素添加 text-align:center 即可 */
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <!-- 此为行内元素 -->
+        <span>我是行内元素</span> <br>
+        <!-- 此为行内块元素 -->
+        <img src="ice.png">
+    </div>
+</body>
+
+</html>

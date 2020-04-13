@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动元素搭配标准流父盒子2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .box {
+            width: 1226px;
+            height: 285px;
+            margin: 0 auto;
+            background-color: #F3F5F2;
+        }
+
+        .box li {
+            float: left;
+            width: 296px;
+            height: 285px;
+            color: skyblue;
+            margin-right: 14px;
+        }
+
+        /* 以下必须写.box .two 。这样的话权重才会高于.box li */
+
+        .box .two {
+            background-color: pink;
+        }
+
+        .box .three {
+            background-color: plum;
+        }
+
+        .box .four {
+            background-color: powderblue;
+            margin-right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="box">
+        <li class="one">1</li>
+        <li class="two">2</li>
+        <li class="three">3</li>
+        <li class="four">4</li>
+    </ul>
+</body>
+
+</html>

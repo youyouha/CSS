@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品模块</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .box {
+            width: 298px;
+            height: 415px;
+            /* 让块级盒子水平居中对齐 */
+            margin: 100px auto;
+            background-color: #fff;
+        }
+
+        .box img {
+            width: 100%;
+        }
+
+        .review {
+            height: 70px;
+            font-size: 14px;
+            /* 因为这个段落没有width属性，所以设置padding值不会撑大盒子 */
+            padding: 0 28px;
+            margin-top: 30px;
+        }
+
+        .appraise {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #BBBBBB;
+            padding: 0 28px;
+
+        }
+
+        .info {
+            font-size: 14px;
+            padding: 0 28px;
+            margin-top: 15px;
+        }
+
+        .info h4 {
+            display: inline-block;
+            font-weight: 400;
+        }
+
+        .info span {
+            color: #ff6700;
+        }
+
+        .info em {
+            color: #ebe4e0;
+            font-style: normal;
+            margin: 0 6px 0 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="images/erji.png" alt="耳机">
+        <p class="review">快递牛，蓝牙可以说是秒连，整体不错，红米巨牛</p>
+        <div class="appraise">来自于121513213的评价</div>
+        <div class="info">
+            <h4><a href="#">Redmi AirDots真无线蓝...</a></h4>
+            <em>|</em>
+            <span>99.9</span>
+        </div>
+    </div>
+</body>
+
+</html>

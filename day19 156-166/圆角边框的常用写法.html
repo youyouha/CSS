@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圆角边框的常用写法</title>
+    <style>
+        .yuanxing {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* border-radius: 100px; */
+            /* 50%就是宽度和高度的一般，等价于100px */
+            border-radius: 50%;
+        }
+
+        .jvxing {
+            width: 300px;
+            height: 100px;
+            background-color: pink;
+            /* 数值设置为盒子高度的一半 */
+            border-radius: 50px;
+        }
+
+        .radius {
+            width: 245px;
+            height: 200px;
+            background-color: pink;
+            /* 该属性是一个简写属性，可以跟四个值，分别代表左上角、右上角、右下角、左下角。（顺时针） */
+            /* border-radius: 10px 20px 30px 40px; */
+            /* 若跟两个数值，则为左上右下对角线，右上左下对角线 */
+            border-radius: 10px 40px;
+            /* 若跟三个数值 ,则为左上，右上左下对角线，右下*/
+            border-radius: 10px 40px 80px;
+            /* 分开写则分别为：border-top-left-radius\border-top-right-radius\border-bottom-left-radius\border-bottom-right-radius */
+
+        }
+    </style>
+</head>
+
+<body>
+    <h4>1.圆形的做法</h4>
+    <div class="yuanxing"></div>
+    <h4>2.圆角矩形的做法</h4>
+    <div class="jvxing"></div>
+    <h4>3.可以设置不同的圆角</h4>
+    <div class="radius"></div>
+</body>
+
+</html>

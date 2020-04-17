@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>淘宝轮播图</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {}
+
+        .tb-promo {
+            /* 子绝父相 */
+            position: relative;
+            /* 相对定位不脱标，所以用margin也可以实现居中 */
+            margin: 100px auto;
+            width: 520px;
+            height: 280px;
+        }
+
+        img {
+            width: 520px;
+            height: 280px;
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            /* 绝对定位的盒子可以直接设置宽和高，不用再转换为块级或行内块元素 */
+            /* display: inline-block; */
+            /* 绝对定位的盒子垂直居中 */
+            top: 50%;
+            margin-top: -15px;
+            width: 20px;
+            height: 30px;
+            background: rgba(0, 0, 0, .3);
+            /* 修改<样式 */
+            text-align: center;
+            line-height: 30px;
+            color: #ffffff;
+            /* 消除下划线 */
+            text-decoration: none;
+        }
+
+        .prev {
+            left: 0;
+            /* 圆角 */
+            /* border-radius: 0 15px 15px 0; */
+            /* 或者 */
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+
+        .next {
+            /* 如果一个盒子既有left属性也有right属性，则默认会执行left属性 同理 top bottom 则会执行top */
+            right: 0;
+            /* 圆角 */
+            /* border-radius: 15px 0 0 15px; */
+            /* 或者 */
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+
+        .promo-nav {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            margin-left: -35px;
+            width: 70px;
+            height: 13px;
+            background: rgba(255, 255, 255, .3);
+            /* 圆角  数值尽量不要用小数点*/
+            border-radius: 7px;
+        }
+
+        .promo-nav li {
+            float: left;
+            width: 8px;
+            height: 8px;
+            margin: 2px;
+            background-color: #ffffff;
+            /* border-radius: 4px; */
+            border-radius: 50%;
+        }
+
+        /* 不要忘记权重问题 */
+        .promo-nav .selected {
+            background-color: #ff5000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tb-promo">
+        <img src="images/tb.jpg" alt="">
+        <!-- 左侧按钮箭头 -->
+        <a href="#" class="prev">&lt;</a>
+        <!-- 右侧按钮箭头 -->
+        <a href="#" class="next">&gt;</a>
+        <!-- 小圆点 -->
+        <ul class="promo-nav">
+            <li class="selected"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+
+</html>

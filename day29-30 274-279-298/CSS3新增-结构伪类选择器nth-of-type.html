@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nth-of-type</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* nth-child会把父元素中所有的盒子都排列序号 */
+        /* 执行的时候首先看:nth-child(1) 之后再回去看 前面的div  */
+        /* 比如先看:nth-child(1)得到的是p标签，再看前面的div 发现不匹配，则不会出现样式 */
+        section div:nth-child(1) {
+            background-color: red;
+        }
+
+        /* nth-of-type会把父元素中指定的盒子都排列序号 */
+        /* 执行的时候首先看 前面指定的div 之后再回去看 nth-of-type(1) 第几个孩子 */
+        /* 比如先看前面的div 之后再去看 nth-of-type(1) 第1个孩子即div的第一个孩子--->熊大*/
+        section div:nth-of-type(1) {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 区别 -->
+    <section>
+        <p>光头强</p>
+        <div>熊大</div>
+        <div>熊二</div>
+    </section>
+</body>
+
+</html>

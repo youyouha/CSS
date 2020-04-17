@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3盒子模型</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: plum;
+            border: 20px solid red;
+            padding: 15px;
+            /* 盒子大小为 width + padding + border （以前默认的）即padding border会撑大盒子 */
+            /* box-sizing: content-box; */
+
+            /* 盒子大小为 width 即 padding 和 border 就不会撑大盒子了（前提padding和border不会超过width宽度） */
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

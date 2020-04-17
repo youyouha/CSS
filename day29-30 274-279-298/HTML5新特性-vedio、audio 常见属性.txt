@@ -1,0 +1,35 @@
+1. 视频<video>
+    语法  <video src="文件地址" controls="controls"></video>
+常见属性
+属性	值                                              描述
+autoplay	autoplay                                   视频就绪自动播放
+controls	controls                                   向用户显示播放控件
+width	    pixels（像素）                              设置播放器宽度
+height	    pixels（像素）                              设置播放器高度
+loop	    loop                                       设置是否循环播放
+preload	    auto （预先加载｛濒） none （不应1H瞬濒）     规定是否预加载视频（如果有了autoplay 就忽略该属性）
+src	        url                                        视频url地址
+poster	    Imgurl                                     加载等待的画面图片
+muted	    muted                                      静音播放
+
+    <!-- 当浏览器不支持MP4格式时，则使用ogg格式，不支持ogg格式则显示文字 -->
+     <video controls="controls" width="300">
+         <source src="move.mp4" type="video/mp4">
+         <source src="move.ogg" type="video/ogg">
+         您的浏览器暂不支持 <video> 标签播放视频
+     </video>
+2. 音频<audio>
+    语法<audio src="文件地址" controls="controls"></audio>
+常见属性
+属性	         值             描述
+autoplay	    autoplay        如果出现该属性，则音频在就绪后马上播放。
+controls	    controls        如果出现该属性，则向用户显示控件，比如播放按钮。
+loop	        loop            如果出现该属性，则每当音频结束时重新开始播放。
+src	            url             要播放的音频的URL
+
+    <!-- 当浏览器不支持MP3格式时，则使用ogg格式，不支持ogg格式则显示文字 -->
+        < audio controls="controls" >
+            <source src="happy.mp3" type="audio/mpeg" >
+            <source src="happy.ogg" type="audio/ogg" >
+            您的浏览器暂不支持 <audio> 标签。
+        </ audio>

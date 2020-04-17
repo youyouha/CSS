@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素使用场景-字体图标</title>
+    <style>
+        /* 引用demo.css */
+        @font-face {
+            font-family: "iconfont logo";
+            src: url('https://at.alicdn.com/t/font_985780_km7mi63cihi.eot?t=1545807318834');
+            src: url('https://at.alicdn.com/t/font_985780_km7mi63cihi.eot?t=1545807318834#iefix') format('embedded-opentype'),
+                url('https://at.alicdn.com/t/font_985780_km7mi63cihi.woff?t=1545807318834') format('woff'),
+                url('https://at.alicdn.com/t/font_985780_km7mi63cihi.ttf?t=1545807318834') format('truetype'),
+                url('https://at.alicdn.com/t/font_985780_km7mi63cihi.svg?t=1545807318834#iconfont') format('svg');
+        }
+
+        /* 引用iconfont.css  */
+        @font-face {
+            font-family: "iconfont";
+            src: url('iconfont.eot?t=1585818372803');
+            /* IE9 */
+            src: url('iconfont.eot?t=1585818372803#iefix') format('embedded-opentype'),
+                /* IE6-IE8 */
+                url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAKYAAsAAAAABkQAAAJOAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcApIXAE2AiQDCAsGAAQgBYRtBzUbhwUR1Ysxsi+hHNtRIKKZ0TLLDmvdea1+HMhDAX0ggQQKAAAAAIjgab903u7+ywYIVHIyvkCuLAlUVYUCVq0w9UCuioRJJbAEEvq2Nn39yAoTVceUvbqx1fT/kIcdLqRLieVEhWwyLz7ABhwQRpphADKfIgRMHbhImy8FGFf/uHf6J1Ag8wHluBetMagLqIsDKaCxNkVWQhk3jF3gEo4T6LGgLXYv9ydVFda4QFwsc6NqzqYoLFiFVs3SIu5p1HQnodwNvx9/JVFJmsxKO3hhkantP5Idli93dMxH2AlodYOMNgpxtNa3XxaMkvX4ihX2lRz80LmvFXtVCfbXWYl9YA6y74njjhUgwW21NYyJUdcTw7x7cHkcX07mHx69GMuY/75+jx5u4RW+XPnaatvRz/K7dFkguH/TdNUr4PMKlUU/A3UP+uBPcHrWFJ1naVJRObWNyfAZinr0oAObRnwfKx8/bShU4yMMXeZTyKo1tJBtaPTahJZqG/TYsG91r1GXZFG6se4GgDDkOSQD3kA25C1ayG/QmPAfWoYig6xdYrSlZxylnjEawQzsE8qUOufoREfJB8yvjeEsL6RekIfSCXEQFYMr7JDnmDHc8kTEgWNqYQlOw6Yh6JkqTCUoRPpJGLq6NwUptUqbYcgQKAOsJ1BKkY7zmwtd+vwByl01DG6pqrFeIDYoOwexQNQDXYm7XlX38srgJpcQwgEOIy2wBINQo0FAXz+oglIiUIzw9CZCu57rKw7Wl7ZftwV6WIoUdpfMO81Mdz9zrZ2vFA==') format('woff2'),
+                url('iconfont.woff?t=1585818372803') format('woff'),
+                url('iconfont.ttf?t=1585818372803') format('truetype'),
+                /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+                url('iconfont.svg?t=1585818372803#iconfont') format('svg');
+            /* iOS 4.1- */
+        }
+
+        .iconfont {
+            font-family: "iconfont" !important;
+            font-size: 16px;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        div {
+            position: relative;
+            margin: 100px auto;
+            width: 200px;
+            height: 35px;
+            border: 1px solid red;
+        }
+
+        div::after {
+            /* 注意此处要复制粘贴iconfont.css中的  .iconfont{}中的第一行代码 */
+            /* 并且将font_xtcsg44ayvg文件放在此文件的同一路径下 */
+            font-family: "iconfont" !important;
+            content: '\e602';
+            position: absolute;
+            top: 17px;
+            margin-top: -8px;
+            right: 5px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

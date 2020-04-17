@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css新增结构伪类选择器</title>
+    <style>
+        /* 1.选择ul中的第一个子元素li */
+        ul li:first-child {
+            color: red;
+        }
+
+        /* 2.选择ul中的最后一个li元素 */
+        ul li:last-child {
+            color: blue;
+        }
+
+        /* 3.选择ul中的第n个子元素li */
+        ul li:nth-child(5) {
+            color: pink;
+        }
+
+        /* 4.选择ul中所有的偶数行子元素li */
+        /* even偶数 odd基数 */
+        ul li:nth-child(even) {
+            background-color: #ccc;
+        }
+
+        /* 5n 表示 5 10 15... */
+        ul li:nth-child(5n) {
+            font-weight: 700;
+        }
+
+        /* 从第5个开始（包含第五个）到最后 */
+        ul li:nth-child(n+5) {
+            font-size: 20px;
+        }
+
+        /* 前5个（包含第5个） */
+        ul li:nth-child(-n+5) {
+            text-decoration: line-through;
+        }
+
+        /* 从0开始每次加1 */
+        ol li:nth-child(n) {
+            background-color: plum;
+        }
+
+        /* 4的倍数行 */
+        ol li:nth-child(4n) {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>第1个孩子</li>
+        <li>第2个孩子</li>
+        <li>第3个孩子</li>
+        <li>第4个孩子</li>
+        <li>第5个孩子</li>
+        <li>第6个孩子</li>
+        <li>第7个孩子</li>
+        <li>第8个孩子</li>
+        <li>第9个孩子</li>
+        <li>第10个孩子</li>
+        <li>第11个孩子</li>
+        <li>第12个孩子</li>
+        <li>第13个孩子</li>
+        <li>第14个孩子</li>
+        <li>第15个孩子</li>
+        <li>第16个孩子</li>
+    </ul>
+    <ol>
+        <li>我是1</li>
+        <li>我是2</li>
+        <li>我是3</li>
+        <li>我是4</li>
+        <li>我是5</li>
+        <li>我是6</li>
+        <li>我是7</li>
+        <li>我是8</li>
+        <li>我是9</li>
+        <li>我是10</li>
+    </ol>
+</body>
+
+</html>

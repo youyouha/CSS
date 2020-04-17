@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>去掉轮廓线和防止拖拽文本域</title>
+    <style>
+        input,
+        textarea {
+            outline: 0;
+            /* 或者 */
+            outline: none;
+        }
+
+        /* 实际开发中，我们文本域右下角是不可以拖拽的。 */
+        textarea {
+            resize: none;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text">
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+</body>
+
+</html>

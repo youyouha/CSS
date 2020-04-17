@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行内块的巧妙运用</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 只要给父元素添加此属性，则其内的行内元素、行内块元素都会水平居中 */
+        .box {
+            text-align: center;
+        }
+
+        .box a {
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            background-color: #f7f7f7;
+            border: 1px solid #ccc;
+            text-decoration: none;
+            text-align: center;
+            line-height: 36px;
+            color: #000;
+        }
+
+        /* 注意权重问题 */
+        .box .prev,
+        .box .next {
+            width: 85px;
+        }
+
+        .box input,
+        .box button {
+            display: inline-block;
+            width: 85px;
+            height: 36px;
+            background-color: #f7f7f7;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <a href="#" class="prev">&lt;&lt;上一页</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">7</a>
+        <a href="#" class="next">下一页&gt;&gt;</a>
+        到第<input type="text">页
+        <button>确定</button>
+    </div>
+</body>
+
+</html>

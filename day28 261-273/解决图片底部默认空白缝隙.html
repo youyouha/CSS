@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>解决图片底部默认空白缝隙问题</title>
+    <style>
+        img {
+            height: 200px;
+            width: 200px;
+        }
+
+        .one {
+            vertical-align: middle;
+        }
+
+        .two {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 对比 -->
+    <img class="zero" src="images/red.jpg" alt="">joy laidebeibei <br>
+    <!-- 1. 给图片添加 vertical-align:middle | top| bottom 等。 （提倡使用的） -->
+    <img class="one" src="images/red.jpg" alt="">joy laidebeibei <br>
+    <!-- 2. 把图片转换为块级元素 display: block; -->
+    <img class="two" src="images/red.jpg" alt="">joy laidebeibei <br>
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+.main {
+    width: 980px;
+    height: 455px;
+    margin-top: 10px;
+    margin-left: 220px;
+}
+
+.main .focus {
+    float: left;
+    width: 722px;
+    height: 455px;
+    background-color: plum;
+}
+
+.main .newsflash {
+    float: right;
+    width: 250px;
+    height: 455px;
+}
+
+.newsflash .news {
+    height: 165px;
+    border: 1px solid #e4e4e4;
+
+}
+
+.newsflash .news .news_hd {
+    height: 33px;
+    line-height: 33px;
+    border-bottom: 1px dotted #e8e8e7;
+}
+
+.newsflash .news .news_hd h5 {
+    float: left;
+    margin-left: 15px;
+}
+
+.newsflash .news .news_hd .more {
+    float: right;
+    margin-right: 30px;
+}
+
+.newsflash .news .more::after {
+    float: right;
+    margin-right: -15px;
+    font-family: "iconfont" !important;
+    content: '\e604';
+}
+
+.newsflash .news .news_bd {
+    padding: 6px 15px;
+}
+
+.newsflash .news .news_bd li {
+    height: 24px;
+    line-height: 24px;
+    /* 让显示不下的文字用省略号来表示 */
+    /* 1.溢出隐藏 */
+    overflow: hidden;
+    /* 2.强制一行显示 */
+    white-space: nowrap;
+    /* 3.溢出部分用省略号表示 */
+    text-overflow: ellipsis;
+}
+
+.newsflash .lifeservice {
+    overflow: hidden;
+    height: 209px;
+    border: 1px solid #e4e4e4;
+    border-top: none;
+}
+
+.newsflash .lifeservice li {
+    float: left;
+    width: 63px;
+    height: 71px;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    text-align: center;
+}
+
+/* 一行装不下4个li： 法一，修改第4n个盒子的宽度
+.newsflash .lifeservice li:nth-child(4n) {
+    width: 59px;
+    border-right: none;
+} */
+/* 法二：将ul的宽度变大，然后隐藏超出的部分 */
+.newsflash .lifeservice ul {
+
+    width: 252px;
+}
+
+.newsflash .lifeservice ul i {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    margin-top: 15px;
+    background-color: pink;
+}
+
+.newsflash .lifeservice ul .i_1 {
+    background: url(../images/icons.png) no-repeat -15px -15px;
+}
+
+.newsflash .lifeservice ul .i_2 {
+    background: url(../images/icons.png) no-repeat -78px -15px;
+}
+
+.newsflash .lifeservice ul .i_3 {
+    background: url(../images/icons.png) no-repeat -140px -15px;
+}
+
+.newsflash .lifeservice ul .i_4 {
+    background: url(../images/icons.png) no-repeat -205px -15px;
+}
+
+.newsflash .lifeservice ul .i_5 {
+    background: url(../images/icons.png) no-repeat -15px -87px;
+}
+
+.newsflash .lifeservice ul .i_6 {
+    background: url(../images/icons.png) no-repeat -78px -87px;
+}
+
+.newsflash .lifeservice ul .i_7 {
+    background: url(../images/icons.png) no-repeat -140px -87px;
+}
+
+.newsflash .lifeservice ul .i_8 {
+    background: url(../images/icons.png) no-repeat -205px -87px;
+}
+
+.newsflash .lifeservice ul .i_9 {
+    background: url(../images/icons.png) no-repeat -15px -158px;
+}
+
+.newsflash .lifeservice ul .i_10 {
+    background: url(../images/icons.png) no-repeat -78px -158px;
+}
+
+.newsflash .lifeservice ul .i_11 {
+    background: url(../images/icons.png) no-repeat -140px -158px;
+}
+
+.newsflash .lifeservice ul .i_12 {
+    background: url(../images/icons.png) no-repeat -205px -158px;
+}
+
+.newsflash .lifeservice ul li {
+    position: relative;
+}
+
+.newsflash .lifeservice .icon {
+    position: absolute;
+    top: -16px;
+    right: 0;
+    display: block;
+    width: 14px;
+    height: 15px;
+    line-height: 15px;
+    color: #fff;
+    background-color: #589d5a;
+}
+
+.newsflash .bargain {
+    margin-top: 5px;
+    /* background-color: tomato; */
+}
+
+/* 推荐模块 */
+.recom {
+    height: 163px;
+    margin-top: 11px;
+    background-color: #ebebeb;
+}
+
+.recom .recom_hd {
+    text-align: center;
+    padding-top: 30px;
+    float: left;
+    width: 206px;
+    height: 163px;
+    background-color: #5c5251;
+}
+
+.recom .recom_bd ul li {
+    position: relative;
+    float: left;
+}
+
+/* 设计人员上传的图片可能不一样大，为了防止盒子混乱所以要把图片的大小写死 */
+.recom .recom_bd ul li img {
+    width: 248px;
+    height: 163px;
+}
+
+.recom .recom_bd ul li:nth-child(n+3)::after {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    content: '';
+    width: 1px;
+    height: 145px;
+    background-color: #dddddd;
+}
